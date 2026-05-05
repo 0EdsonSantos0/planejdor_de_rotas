@@ -21,3 +21,28 @@
 
 ### 5. Entrega Final
 - [ ] Desenvolver e testar o protótipo funcional de ponta a ponta.
+
+
+## Como Rodar o seu Software
+1.  Abra o seu terminal/prompt de comando.
+2.  Navegue até a pasta onde você salvou os dois arquivos.
+3.  Digite o comando para ligar o servidor web:
+    ```bash
+    python app.py
+    ```
+4.  O terminal vai mostrar uma mensagem parecida com `Running on http://127.0.0.1:5000`.
+5.  Abra o seu navegador (Chrome, Edge, etc.) e acesse **`http://127.0.0.1:5000Para transformar o seu projeto de um script no Jupyter Notebook para uma aplicação web real, precisamos mudar um pouco a arquitetura. Como a web funciona através de requisições e respostas (HTTP), o seu loop `while` infinito do terminal não vai funcionar no navegador.
+
+A melhor e mais profissional forma de fazer isso para o seu TCC é dividir o projeto em duas partes:
+1.  **Backend (Python + Flask):** Um servidor leve que vai hospedar o seu código A*, guardar o "estado" da simulação (onde o caminhão está) e processar as rotas.
+2.  **Frontend (HTML + Bootstrap + JavaScript):** A interface onde você vai clicar nos botões e ver o mapa do Folium.
+
+Aqui está a estrutura completa para você criar essa aplicação.
+
+---
+
+### 1. Preparando o Ambiente
+
+Primeiro, você precisará instalar o **Flask**, que é o framework web para Python:
+```bash
+pip install flask
